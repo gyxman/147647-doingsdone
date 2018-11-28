@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title><?=$title;?></title>
+    <title><?= htmlspecialchars($title); ?></title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flatpickr.min.css">
@@ -44,8 +44,8 @@
                     <ul class="main-navigation__list">
                         <?php foreach ($projects as $project): ?>
                             <li class="main-navigation__list-item">
-                                <a class="main-navigation__list-item-link" href="#"><?=$project;?></a>
-                                <span class="main-navigation__list-item-count"><?=getCountTasks($tasks, $project);?></span>
+                                <a class="main-navigation__list-item-link" href="#"><?= htmlspecialchars($project); ?></a>
+                                <span class="main-navigation__list-item-count"><?= getCountTasks($tasks, $project); ?></span>
                             </li>
                         <?php endforeach; ?>
                     </ul>

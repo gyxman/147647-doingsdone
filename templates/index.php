@@ -15,7 +15,7 @@
     </nav>
 
     <label class="checkbox">
-        <input class="checkbox__input visually-hidden show_completed" type="checkbox" <?=$show_complete_tasks ? 'checked' : ''?>>
+        <input class="checkbox__input visually-hidden show_completed" type="checkbox" <?= $show_complete_tasks ? 'checked' : ''?>>
         <span class="checkbox__text">Показывать выполненные</span>
     </label>
 </div>
@@ -27,7 +27,7 @@
                 <td class="task__select">
                     <label class="checkbox task__checkbox">
                         <input class="checkbox__input visually-hidden task__checkbox" type="checkbox" value="1">
-                        <span class="checkbox__text"><?=$task_val['name'];?></span>
+                        <span class="checkbox__text"><?= htmlspecialchars($task_val['name']); ?></span>
                     </label>
                 </td>
 
@@ -38,7 +38,7 @@
                 -->
 
                 <td class="task__date">
-                    <?=$task_val['date'];?>
+                    <?= $task_val['date']; ?>
                 </td>
             </tr>
         <?php endif; ?>
