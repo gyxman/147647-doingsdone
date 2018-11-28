@@ -28,7 +28,7 @@ function checkDateTask($date) {
     $task_date = strtotime($date);
     $date_now = time();
     $date_diff = $task_date - $date_now;
-    $hours = floor($date_diff / $sec_in_hour);
+    $hours = $date_diff / $sec_in_hour;
 
     if ($hours <= $hours_count_important) {
         return $hours;
