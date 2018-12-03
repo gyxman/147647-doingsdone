@@ -13,7 +13,7 @@ CREATE TABLE tasks (
     date_create TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     date_completed TIMESTAMP,
     is_completed TINYINT DEFAULT 0,
-    name CHAR NOT NULL,
+    name VARCHAR(255) NOT NULL,
     file_path VARCHAR(255),
     date_target TIMESTAMP,
     project_id INT NOT NULL
