@@ -7,7 +7,7 @@ CREATE TABLE projects (
     name VARCHAR(255) NOT NULL,
     author_id INT NOT NULL,
     UNIQUE KEY author_name (`author_id`, `name`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE tasks (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -18,7 +18,7 @@ CREATE TABLE tasks (
     file_path VARCHAR(255),
     date_target TIMESTAMP,
     project_id INT NOT NULL
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 CREATE INDEX name ON tasks(name);
 
 CREATE TABLE users (
@@ -27,5 +27,5 @@ CREATE TABLE users (
     email VARCHAR(128) NOT NULL UNIQUE,
     name VARCHAR(255),
     password CHAR(64)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
