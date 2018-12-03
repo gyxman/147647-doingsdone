@@ -31,7 +31,7 @@ function checkDateTask($date) {
     $hours = $date_diff / $sec_in_hour;
 
     if ($hours <= $hours_count_important) {
-        return $hours;
+        return true;
     }
 
     return false;
