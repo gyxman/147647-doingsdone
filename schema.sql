@@ -5,7 +5,8 @@ DEFAULT COLLATE utf8_general_ci;
 CREATE TABLE projects (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    author_id INT
+    author_id INT NOT NULL,
+    UNIQUE KEY author_name (`author_id`, `name`)
 );
 
 CREATE TABLE tasks (
@@ -27,3 +28,4 @@ CREATE TABLE users (
     name VARCHAR(255),
     password CHAR(64)
 );
+
