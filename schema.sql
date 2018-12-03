@@ -25,5 +25,5 @@ CREATE TABLE users (
     date_add TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     email VARCHAR(128) NOT NULL UNIQUE,
     name VARCHAR(255),
-    password VARCHAR(64)
+    password CHAR(64)
 );
