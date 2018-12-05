@@ -25,10 +25,10 @@ SELECT name FROM projects WHERE author_id = '1';
 SELECT name FROM tasks WHERE project_id = '3';
 
 // пометить задачу как выполненную
-UPDATE tasks SET is_completed = '1' WHERE name = 'Собеседование в IT компании';
+UPDATE tasks SET is_completed = '1' WHERE id = '1';
 
 // получить все задачи для завтрашнего дня
-SELECT name FROM tasks WHERE date_target = '06.12.2018';
+SELECT name FROM tasks WHERE date_target = '25.12.2018';
 
 // обновить название задачи по её идентификатору
 UPDATE tasks SET name = 'Выполнить тестовое задание - new' WHERE id = '2';
