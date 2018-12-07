@@ -22,8 +22,8 @@
 
 <table class="tasks">
     <?php foreach ($tasks as $task => $task_val): ?>
-        <?php if ($show_complete_tasks || $task_val['complete'] === 'Нет') : ?>
-            <tr class="tasks__item task<?php if ($task_val['complete'] === 'Да'): ?> task--completed<?php endif; ?><?php if (checkDateTask($task_val['date'])): ?> task--important<?php endif; ?>">
+        <?php if ($show_complete_tasks || $task_val['is_completed'] === '0') : ?>
+            <tr class="tasks__item task<?php if ($task_val['is_completed'] === '1'): ?> task--completed<?php endif; ?><?php if (checkDateTask($task_val['date_target'])): ?> task--important<?php endif; ?>">
                 <td class="task__select">
                     <label class="checkbox task__checkbox">
                         <input class="checkbox__input visually-hidden task__checkbox" type="checkbox" value="1">
@@ -38,7 +38,7 @@
                 -->
 
                 <td class="task__date">
-                    <?= $task_val['date']; ?>
+                    <?php $date = date_create($task_val['date_target']); echo date_format($date, 'd.m.Y'); ?>
                 </td>
             </tr>
         <?php endif; ?>
